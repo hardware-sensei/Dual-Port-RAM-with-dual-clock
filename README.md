@@ -3,7 +3,7 @@ This Repository presents the design of a Random Access Memory which is used to s
 
 ## RTL Synthesis
 <> ![RTL Synthesis by Yosys](https://github.com/D4WN-9/Dual-Port-RAM-with-dual-clock/blob/main/fig_1_RTL.png)
-<img src="https://github.com/D4WN-9/Dual-Port-RAM-with-dual-clock/blob/main/fig_1_RTL.png" width="200">
+<img src="https://github.com/D4WN-9/Dual-Port-RAM-with-dual-clock/blob/main/fig_1_RTL.png" width="400">
 
 The RTL synthesis is done using yosys framework. The above diagram in the optimized result of synthesis. The address pins are unidirectional, and data pins are bidirectional i.e. data can flow into and out of the memory as per requirement. There are two always blocks in the design one for each port. These ensure that both ports remain sensitive to their clock signals in case of simultaneous accessing of memory by both devices. The read operation is automatically assumed if write enable is low, the data out bus receives the contents of the memory location that has been accessed. During write operation the contents of data in bus are stored at the memory address location provided in address bus and data out bus also receives the contents of memory. Hence, all write operations automatically also carry forward the data to output bus.
 
