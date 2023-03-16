@@ -1,6 +1,9 @@
 # Dual Port RAM with dual clock
 This Repository presents the design of a Random Access Memory which is used to store data. The RAM has two ports, both have read and write functionality. Both ports have their own clock signals, which makes this design asynchronous in nature. The RAM can be shared among two separate processors both of which can read(write) data from(to) it simultaneously. This type of RAM is used for high speed(frequency) and low size data transfers between two asynchronous systems. Hence, applications which require varying level of complexity, and utilize two processors are heavily sped up by the use of dual port memories.
 
+## Functionality
+The memory design is accomplished using Behavioural modelling in Verilog HDL . A memory contains of a data structure which signifies a two-dimensional array of bits. The depth and width parameters can be modified by altering the parameters declared at the beginning of the design. The design contains many variables with their own unique functions. Address pointer are used to select the memory location which is to be read or written to. Each port has one address pointer. The write-enable pin tells the memory whether to read or write to itself. Each port has one write-enable pin. Clock of each port is designed according to the device that needs to access that port. Two data in and out buses are also manifested to ensure smooth flow of data in and out of the memory design.
+
 ## RTL Synthesis
 <img src="https://github.com/D4WN-9/Dual-Port-RAM-with-dual-clock/blob/main/fig_1_RTL.png" width="600">
 
